@@ -19,14 +19,14 @@ services:
       - "8080:8080"
 
   pg-catalog:
-  image: postgres:latest
-  container_name: pg_catalog
-  environment:
-    POSTGRES_USER: iceberg
-    POSTGRES_PASSWORD: iceberg
-    POSTGRES_DB: iceberg
-  ports:
-    - "5432:5432"
+    image: postgres:latest
+    container_name: pg_catalog
+    environment:
+      POSTGRES_USER: iceberg
+      POSTGRES_PASSWORD: iceberg
+      POSTGRES_DB: iceberg
+    ports:
+      - "5432:5432"
 
   #  spark-worker:
   #    container_name: spark-worker
