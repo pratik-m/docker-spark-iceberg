@@ -14,16 +14,16 @@ services:
       - "8888:8888"
       - "8080:8080"
 
-  spark-worker:
-    container_name: spark-worker
-    image: spark-iceberg
-    #entrypoint: ["./entrypoint.sh", "worker"]
-    depends_on:
-      - spark-iceberg
-    volumes:
-      - ./data:/opt/spark/data
-      - ./spark_apps:/opt/spark/apps
-      - ./spark-logs:/opt/spark/spark-events
-
-    ports:
-      - "8081:8081"
+  #  spark-worker:
+  #    container_name: spark-worker
+  #    image: spark-iceberg
+  #    #entrypoint: ["./entrypoint.sh", "worker"]
+  #    depends_on:
+  #      - spark-iceberg
+  #    volumes:
+  #      - ./data:/opt/spark/data
+  #      - ./spark_apps:/opt/spark/apps
+  #      - ./spark-logs:/opt/spark/spark-events
+  #
+  #    ports:
+  #      - "8081:8081"
